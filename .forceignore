@@ -12,3 +12,21 @@ package.xml
 **/__tests__/**
 
 node_modules/
+
+# -----------------------------------------------------------
+# Deploy/retrieve safety: Org-wide configuration and metadata exclusions
+# Prevents accidental org-wide config overwrite and credential exposure
+# -----------------------------------------------------------
+
+# Org-wide metadata configured in Setup only
+**/profiles/**
+**/settings/**
+**/standardValueSets/**
+**/roles/**
+**/groups/**
+**/queues/**
+
+# Auth and Integration metadata created in Setup only
+**/namedCredentials/**
+**/externalCredentials/**
+**/connectedApps/**
